@@ -1,0 +1,29 @@
+[
+    {
+        "username": "c215714n",
+        "fullname":"Cristian Racedo",
+        "email":"cristiandracedo@hotmail.com"
+    },
+    {
+        "username":"Mr.X",
+        "fullname":"Homero Simpson",
+        "email": "h.simpson@mrx.com",
+        "address": {
+            "street": "avenida siempreviva",
+            "number": "136",
+            "city": "springfield"
+        }
+    },
+    {
+        "username": "theGOAT",
+        "fullname": "Lionel Messi",
+        "email": "el10@messi.com",
+        "phone": "0800-5465-3774"
+    },
+    {
+        "username": "JRR10",
+        "fullname": "Juan Roman Riquelme",
+        "email": "juan_roman_riquelme@bocajuniors.com.ar",
+        "phone": "5777-1200"
+    }
+]
