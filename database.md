@@ -54,3 +54,5 @@ Si bien la forma en la que se _almacena y distribuye_ la informacion en el servi
 | registro | documentos | conjunto de datos relacionados entre sí |
 | campos | claves | identificado de un conjunto datos del mismo tipo |
 | datos | valores | minima porcion de informacion, pertenece a un tipo |
+
+[Volver](./readme.md)
