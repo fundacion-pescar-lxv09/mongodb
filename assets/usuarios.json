@@ -1,12 +1,12 @@
 [
     {
         "username": "c215714n",
-        "fullname":"Cristian Racedo",
-        "email":"cristiandracedo@hotmail.com"
+        "fullname": "Cristian Racedo",
+        "email": "cristiandracedo@hotmail.com"
     },
     {
-        "username":"Mr.X",
-        "fullname":"Homero Simpson",
+        "username": "Mr.X",
+        "fullname": "Homero Simpson",
         "email": "h.simpson@mrx.com",
         "address": {
             "street": "avenida siempreviva",
