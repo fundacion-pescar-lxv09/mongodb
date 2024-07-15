@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "668e8faaaa869e78fa1b49bd"
+  },
+  "categories": [
+    "tecnologia",
+    "informatica",
+    "computacion",
+    "perifericos",
+    "hardware"
+  ],
+  "price": 8000,
+  "stock": 50,
+  "company": "Redragon",
+  "product": "teclado mecanico",
+  "username": "spidey",
+  "postDate": {
+    "$date": "2024-07-15T13:37:53.927Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "668e92bfaa869e78fa1b49be"
+  },
+  "categories": [
+    "tecnologia",
+    "informatica",
+    "computacion",
+    "perifericos",
+    "hardware"
+  ],
+  "price": 51999.99,
+  "stock": 20,
+  "company": "LG",
+  "username": "c215714n",
+  "product": "Monitor 27"
+},
+{
+  "_id": {
+    "$oid": "668e92bfaa869e78fa1b49bf"
+  },
+  "categories": [
+    "muebles",
+    "hogar",
+    "oficina",
+    "gamming"
+  ],
+  "price": 90000,
+  "stock": 100,
+  "company": "Easy",
+  "username": "theBatman",
+  "product": "Escritorio"
+},
+{
+  "_id": {
+    "$oid": "668e92bfaa869e78fa1b49c0"
+  },
+  "categories": [
+    "tecnologia",
+    "informatica",
+    "computacion",
+    "perifericos",
+    "hardware",
+    "impresion",
+    "oficina"
+  ],
+  "price": 45500,
+  "stock": 35,
+  "company": "HP",
+  "username": "I4mIr0nm4n",
+  "product": "Impresora Sistema Continuo"
+},
+{
+  "_id": {
+    "$oid": "668e92bfaa869e78fa1b49c1"
+  },
+  "categories": [
+    "tecnologia",
+    "informatica",
+    "computacion",
+    "perifericos",
+    "hardware",
+    "gamming",
+    "streaming"
+  ],
+  "price": 1300000,
+  "stock": 30,
+  "company": "Nvidia",
+  "username": "theBatman",
+  "product": "Aceleradora Grafica"
+},
+{
+  "_id": {
+    "$oid": "668e9fc6aa869e78fa1b49c2"
+  },
+  "company": "LogiTech",
+  "price": 4900,
+  "categories": [
+    "tecnologia",
+    "informatica",
+    "computacion",
+    "perifericos",
+    "hardware"
+  ],
+  "stock": 15,
+  "username": "c215714n",
+  "product": "mouse"
+},
+{
+  "_id": {
+    "$oid": "66952321b01cb1d466acf9b4"
+  },
+  "product": "teclado",
+  "categories": [
+    "hardware",
+    "perifericos",
+    "hardware"
+  ],
+  "company": "logitech",
+  "stock": 45,
+  "price": 5400,
+  "createdAt": {
+    "$date": "2020-04-18T00:00:00.000Z"
+  },
+  "username": "JohnDoe"
+},
+{
+  "_id": {
+    "$oid": "66952321b01cb1d466acf9b5"
+  },
+  "product": "Silla para Oficina",
+  "categories": [
+    "oficina",
+    "muebles"
+  ],
+  "stock": 100,
+  "price": 749999.99,
+  "company": "techome",
+  "postDate": {
+    "$date": "2024-07-15T13:37:53.927Z"
+  },
+  "username": "spidey"
+}]

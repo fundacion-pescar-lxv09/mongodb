@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "668e829764966e02718e45fe"
+  },
+  "username": "c215714n",
+  "fullname": "Cristian Racedo",
+  "email": "cristiandracedo@hotmail.com"
+},
+{
+  "_id": {
+    "$oid": "668e829764966e02718e45ff"
+  },
+  "username": "Mr.X",
+  "fullname": "Homero Simpson",
+  "email": "h.simpson@mrx.com",
+  "address": {
+    "street": "avenida siempreviva",
+    "number": "136",
+    "city": "springfield"
+  }
+},
+{
+  "_id": {
+    "$oid": "668e829764966e02718e4600"
+  },
+  "username": "theGOAT",
+  "fullname": "Lionel Messi",
+  "email": "el10@messi.com",
+  "phone": "0800-5465-3774"
+},
+{
+  "_id": {
+    "$oid": "668e829764966e02718e4601"
+  },
+  "username": "JRR10",
+  "fullname": "Juan Roman Riquelme",
+  "email": "juan_roman_riquelme@bocajuniors.com.ar",
+  "phone": "5777-1200"
+},
+{
+  "_id": {
+    "$oid": "668e85a164966e02718e4602"
+  },
+  "username": "wonder_woman",
+  "fullname": "diana prince",
+  "address": "temiscira"
+},
+{
+  "_id": {
+    "$oid": "668e85a164966e02718e4603"
+  },
+  "username": "theBatman",
+  "fullname": "bruce wayne",
+  "email": "bruce@waynetech.com",
+  "address": "mansion wayne"
+},
+{
+  "_id": {
+    "$oid": "668e85a164966e02718e4604"
+  },
+  "username": "spidey",
+  "fullname": "peter parker",
+  "email": "friendly_neighbor@spidey.com",
+  "address": {}
+},
+{
+  "_id": {
+    "$oid": "668e85a164966e02718e4605"
+  },
+  "username": "I4mIr0nm4n",
+  "fullname": "Anthony Stark",
+  "email": "tony@starkindustries.com"
+},
+{
+  "_id": {
+    "$oid": "6694a641b0680b8eff99b18b"
+  },
+  "username": "JohnDoe",
+  "fullname": "John Doe",
+  "email": "john.doe@gmail.com"
+}]
