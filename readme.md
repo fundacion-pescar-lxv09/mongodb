@@ -10,6 +10,8 @@ Esto es una guia para los alumnos de la capacitacion de __Bases de datos NoSQL__
 * [NoSQL Booster](https://nosqlbooster.com/downloads)
 
 ## Tabla de Contenidos
+
 * [Bases de Datos](./database.md)
 * [Metodos CRUD](./crud.md)
 * [Operadores](./operators.md)
+* [Metodos con Cursor](./aggregation.md)
