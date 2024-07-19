@@ -1,5 +1,5 @@
-// Creacion y seleccion de Base de Datos
-use pescarTravels;
+// Eliminacion de la Coleccion Destinos
+db.destinations.drop();
 // Definicion de la coleccion Destinos
 db.createCollection("destinations", {
     validator: {
@@ -18,7 +18,7 @@ db.createCollection("destinations", {
                     items: { bsonType: "string" }
                 },
                 transportation: { bsonType: "string" },
-                cost: { bsonType: "decimal" },
+                cost: { bsonType: "number" },
                 currency: { bsonType: "string" }
             } },
             lodging: {
@@ -41,7 +41,7 @@ db.createCollection("destinations", {
                             bsonType: "object",
                             properties: {
                             type: { bsonType: "string" },
-                            cost: { bsonType: "decimal" },
+                            cost: { bsonType: "number" },
                             currency: { bsonType: "string" }
                     } } }
             } } },
@@ -80,8 +80,8 @@ db.destinations.createIndex({"lodging.pension.type":1});
 db.destinations.createIndex({"location.country":1, "location.city":1});
 db.destinations.createIndex({"payment.type":1,"payment.currency":-1});
 db.destinations.createIndex({"package.cost":1,"lodging.pension.cost":1});
-
-let commonPayments = [
+// Constantes Comunes
+const commonPayments = [
     {type: "Debito", currency: "ARS"},
     {type: "Credito", currency: "ARS"},
     {type: "Debito", currency: "USD"},
@@ -89,7 +89,7 @@ let commonPayments = [
     {type: "Debito", currency: "EUR"},
     {type: "Credito", currency: "EUR"},
 ];
-let commonPensions = [
+const commonPensions = [
     { type: "todo incluido", currency: "ARS" },
     { type: "todo incluido", currency: "USD" },
     { type: "todo incluido", currency: "EUR"},
@@ -100,15 +100,15 @@ let commonPensions = [
     { type: "media pension", currency: "USD" },
     { type: "media pension", currency: "EUR"},
 ]
-
-let ref = {
+// Objeto de Referencia
+const ref = {
     name: "",
     package: {
         days: 0,
         nights: 0,
         activities: ["dormir", "comer", "amar"],
-        transportation: ["avion", "barco"],
-        cost: 0.0000,
+        transportation: "avion",
+        cost: 0.0001,
         currency: "USD"
     },
     lodging: {
@@ -133,31 +133,71 @@ let ref = {
     travelDate: ISODate("2024-08-01"),
     payment: commonPayments
 }
-
-let destinations = [
+// Documentos a Insertar en Destinos
+const destinations = [
     {
         name: "acapulco",
-        location: {country: "mexico", region: "norteamerica"},
+        location: {country: "mexico", city:"", region: "norteamerica"},
     },
     {
         name: "bariloche",
-        location: {country: "argentina", region: "sudamerica"},
+        location: {country: "argentina", city:"", region: "sudamerica"},
     },
     {
         name: "machu pichu",
-        location: {country: "peru", region: "sudamerica"},
+        location: {country: "peru", city:"", region: "sudamerica"},
     },
     {
         name: "paris",
-        location: {country: "francia", region: "europa"},
+        location: {country: "francia", city:"", region: "europa"},
     },
     {
         name: "mikonos",
-        location: {country: "grecia", region: "europa"},
+        location: {country: "grecia", city:"", region: "europa"},
     }
 ]
-
+// Iteracion y creacion de Objetos Nuevos
 destinations.forEach( d => {
     const current = {...ref, ...d};
     db.destinations.insertOne(current);
+})
+// Consulta de Datos
+db.destinations.find();
+
+db.createCollection("users", {
+    validator: {
+    $jsonSchema: {
+        bsonType: "object",
+        required: [""],
+        properties: {
+            userName: { 
+                bsonType: "string",
+                minLength: 4,
+                maxLength: 20
+            },
+            email: {bsonType: "string" },
+            password: { bsonType: "hash" },
+            userData: {
+                bsonType: "object",
+                properties: {
+                    firstName: {bsonType: "string" },
+                    lastName: {bsonType: "string" },
+                    address: {bsonType: ["string","object"] },
+                    phone: {bsonType: "string" },
+            } },
+            paymentData: {
+                bsonType: "array",
+                items: {
+                    bsonType: "object",
+                    properties: {
+                        type: { bsonType: "string" },
+                        id: { bsonType: "string" },
+                        code: { bsonType: "hash" },
+                        name: { bsonType: "string" },
+                        validFrom: { bsonType: "date" },
+                        validTo: { bsonType: "date" },
+                    }
+                }
+            }
+    } } }
 })
