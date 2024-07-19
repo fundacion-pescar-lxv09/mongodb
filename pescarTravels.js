@@ -1,6 +1,6 @@
 // Creacion y seleccion de Base de Datos
 use pescarTravels;
-// Definicion de Modelo para la coleccion Destinos
+// Definicion de la coleccion Destinos
 db.createCollection("destinations", {
     validator: {
     $jsonSchema: {
@@ -59,7 +59,10 @@ db.createCollection("destinations", {
                         longitude: { bsonType: "number" }
                 } } }
             },
-            travelDate: { bsonType: ["array", "date"] },
+            travelDate: { 
+                bsonType: ["array", "date"],
+                items: { bsonType: "date" }
+            },
             payment: {
                 bsonType: ["array", "object"],
                 items: {
@@ -71,3 +74,10 @@ db.createCollection("destinations", {
         }
     }}
 });
+// Indices de la Coleccion Destinos
+db.destinations.createIndex({name:1},{unique:true});
+db.destinations.createIndex({"lodging.pension.type":1});
+db.destinations.createIndex({"location.country":1, "location.city":1});
+db.destinations.createIndex({"payment.type":1,"payment.currency":-1});
+db.destinations.createIndex({"package.cost":1,"lodging.pension.cost":1});
+
