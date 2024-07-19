@@ -198,6 +198,8 @@ db.createCollection("users", {
                         validTo: { bsonType: "date" },
                     }
                 }
-            }
+            },
+            packageHistory: { bsonType: "array" },
+            adquiredPackages: { bsonType: "array" }
     } } }
 })
